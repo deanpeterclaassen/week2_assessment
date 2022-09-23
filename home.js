@@ -22,7 +22,9 @@
 */
 
 //CODE HERE
-
+const greetUser =(username) =>{
+    return `Welcome back, ${username}`
+}
 
 
 
@@ -50,6 +52,12 @@
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
+function canWeDeliver(zipCode){
+    
+        if(deliveryAreaZipCodes.includes(zipCode)){
+            return `You're in our delivery zone!`
+        }else return `Sorry, we can't deliver to that address`
+    }
 
 
 
@@ -71,8 +79,15 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 */
 
 // CODE HERE
+function canWeDeliverTwo(zipCode){
+    for(i = 0; i < deliveryAreaZipCodes.length; i++){
+        if(deliveryAreaZipCodes[i] === zipCode){
+            return `You're in our delivery zone!`
+        }else return `Sorry, we can't deliver to that address`
+    }
 
-
+}
+console.log(canWeDeliverTwo(8520))
 //////////////////PROBLEM 3////////////////////
 /* 
     Below is an array of objects that have some
@@ -107,6 +122,7 @@ const deals = [
 */
 
 //CODE HERE
+title = {title: '15% Off!'.replace("10% off!")}
 
 
 
@@ -124,3 +140,4 @@ const deals = [
 */
 
 //CODE HERE
+desc = {desc:'March'.replace("April") }
