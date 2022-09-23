@@ -89,7 +89,9 @@
 
 //CODE HERE
 
+let foodArr = [
 
+]
 
 //////////////////PROBLEM 4////////////////////
 /* 
@@ -159,3 +161,15 @@
 */
 
 //CODE HERE
+const filterByProperty = (property, number,type ) =>{
+    let filteredArray = [];
+    if (type === "above" ){
+        filteredArray = foodArr.filter( (pizzaObj) => pizzaObj[property]> number);
+
+    } else {
+        filteredArray = foodArr.filter( (pizzaObj) => pizzaObj[property]< number);
+    }
+
+    return filteredArray;
+} 
+console.log(filterByProperty("price",10,"above"))

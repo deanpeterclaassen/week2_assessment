@@ -122,10 +122,10 @@ const deals = [
 */
 
 //CODE HERE
-title = {title: '15% Off!'.replace("10% off!")}
 
 
-
+deals[0].title = deals [0].title.replace("15","10")
+console.log(deals[0]);
 /*
     The restaurant is going to continue its
     family deal for another month. 
@@ -140,4 +140,5 @@ title = {title: '15% Off!'.replace("10% off!")}
 */
 
 //CODE HERE
-desc = {desc:'March'.replace("April") }
+deals[1].desc = deals[1].desc.replace("March","April")
+console.log(deals[1]);
