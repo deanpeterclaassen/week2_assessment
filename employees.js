@@ -43,6 +43,7 @@ class Employee {
 
 //CODE HERE
 const empOne = new Employee("jess","weekday mornings, weekday afternoons")
+
 /*
 
     Call the `getSchedule` method on the
@@ -50,7 +51,7 @@ const empOne = new Employee("jess","weekday mornings, weekday afternoons")
 */
 
 //CODE HERE
-empOne.getSchedule()
+console.log(empOne.getSchedule())
 
 /*
     Make a copy of the empOne object
@@ -65,8 +66,8 @@ empOne.getSchedule()
 */
 
 //CODE HERE
-const empTwo = {...empOne,"nick"}
-
+const empTwo = {...empOne,name:"nick",}
+console.log(empTwo);
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -95,7 +96,7 @@ const empTwo = {...empOne,"nick"}
 class Manager extends Employee{
     constructor(name,shift,employees){
         super(name,shift)
-        this.employees = [employees]
+        this.employees = employees
     } getEmployees(){
         console.log(`${this.name} manages ${this.employees}`);
     }; addEmployee(emp){
@@ -125,7 +126,7 @@ const manager = new Manager("winston","weekday mornings, weekday afternoons",["C
 */
 
 //CODE HERE
-manager.getEmployees
+manager.getEmployees()
 /*
     Call the `addEmployee` method on the 
     `manager` object passing in the string 
@@ -141,4 +142,4 @@ manager.addEmployee("Coach")
 */
 
 //CODE HERE
-manager.getEmployees
+manager.getEmployees()

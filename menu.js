@@ -31,7 +31,16 @@
 */
 
 //CODE HERE
-let pizza 
+const pizza = 
+{
+    name: "THE pizza",
+    price: 10,
+    category: "entree",
+    popularity: 10,
+    rating: 9.98,
+    tags: ["extra-gluten","adult menu"]
+}
+
 
 
 //////////////////PROBLEM 2////////////////////
@@ -44,7 +53,7 @@ let pizza
 
 //CODE HERE
 
-
+console.log(pizza.popularity)
 /*
     Second, log the second tag in your pizza's
     tags array.
@@ -53,7 +62,7 @@ let pizza
 */
 
 //CODE HERE
-
+console.log(pizza.tags[1]);
 
 /*
     Third, destructure the price off of the
@@ -63,8 +72,8 @@ let pizza
 */
 
 //CODE HERE
-
-
+const {price = 11} = pizza.price
+console.log(price);
 /*
     Fourth, and last, destructure the category
     property.
@@ -73,7 +82,8 @@ let pizza
 */
 
 //CODE HERE
-
+const {category} = pizza
+console.log(category);
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -90,6 +100,47 @@ let pizza
 //CODE HERE
 
 let foodArr = [
+    {
+    name: "pasta",
+    price: 12.74 ,
+    category: "entree",
+    popularity: 8 ,
+    rating: "7.7",
+    tags: ["kids menu","healthy"]
+},
+{
+    name: "steak",
+    price: 15.83,
+    category: "entree",
+    popularity: 9.4,
+    rating: 9,
+    tags: ["savory","adult menu"]
+},
+{
+    name: "salad",
+    price: 8.40,
+    category: "appitizer",
+    popularity: 6.7,
+    rating: 7.4,
+    tags: ["healthy","vegetarian"]
+},
+{
+    name: "chicken noodle soup",
+    price: 6.32,
+    category: "appitizer",
+    popularity: 4.8,
+    rating: 6.5,
+    tags: ["white-meat","light option"]
+},
+{
+    name: "man n cheese",
+    price: 7.80,
+    category: "entree",
+    popularity: 8.5,
+    rating: 7.4,
+    tags: ["kids menu","filling"]
+}
+
 
 ]
 
@@ -107,8 +158,10 @@ let foodArr = [
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
-
+const filteredFood = foodArr.filter(function(elem){
+    return elem.tags.includes("light option")
+})
+console.log(filteredFood);
 
 
 //////////////////PROBLEM 5////////////////////
@@ -151,16 +204,6 @@ let foodArr = [
 */
 
 //CODE HERE
-
-
-/*
-    Invoke the `filterByProperty` function passing
-    in a value for each paramter.
-
-    You'll have to console.log to see the filtered array
-*/
-
-//CODE HERE
 const filterByProperty = (property, number,type ) =>{
     let filteredArray = [];
     if (type === "above" ){
@@ -172,4 +215,13 @@ const filterByProperty = (property, number,type ) =>{
 
     return filteredArray;
 } 
+/*
+    Invoke the `filterByProperty` function passing
+    in a value for each paramter.
+
+    You'll have to console.log to see the filtered array
+*/
+
+//CODE HERE
+
 console.log(filterByProperty("price",10,"above"))
